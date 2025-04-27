@@ -52,6 +52,21 @@ body {
   transform: translateX(0);
 }
 
+.hireme-container h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--light-blue);
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100%); /* Slide in from left */
+  transition: all 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* Add this class to the h2 element after the animation */
+.slide-in-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /* for paragraphs inside the car container */
 .hireme-container p {
   font-size: 1rem;
