@@ -62,5 +62,4 @@ gsap.fromTo(
 
 gsap.fromTo(".hireme-container h1", { opacity: 0, x: -100 }, { opacity: 1, x: 0, delay: 0.5 });
 gsap.fromTo(".hireme-container h2", { opacity: 0, x: -100 }, { opacity: 1, x: 0, delay: 0.5 });
-gsap.fromTo(".hireme-container h3", { opacity: 0, x: -100 }, { opacity: 1, x: 0, delay: 0.5 });
 gsap.fromTo(".hireme-container p", { opacity: 0, x: -100 }, { opacity: 1, x: 0, delay: 0.5 });
