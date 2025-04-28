@@ -46,20 +46,6 @@ gsap.fromTo(
   }
 );
 
- gsap.fromTo(
-      ".project-card-4", // Target the project cards
-      { opacity: 0, scale: 0.5, rotate: 90 }, // Start small and rotated
-      { 
-        opacity: 1, 
-        scale: 1, 
-        rotate: 0, 
-        duration: 1.5, 
-        ease: "power3.out", 
-        stagger: 0.3 // Animate cards one after the other
-      }
-    );
-  });
-
 gsap.fromTo(".hireme-container h1", { opacity: 0, x: -100 }, { opacity: 1, x: 0, delay: 0.5 });
 gsap.fromTo(".hireme-container h2", { opacity: 0, x: -100 }, { opacity: 1, x: 0, delay: 0.5 });
 gsap.fromTo(".hireme-container p", { opacity: 0, x: -100 }, { opacity: 1, x: 0, delay: 0.5 });
