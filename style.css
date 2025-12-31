@@ -606,6 +606,12 @@ color: var(--text-color);
   .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
     width: 80%;
   }
+  .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
+    width: 65%;
+  }
+  .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span{
+    width: 75%;
+  }
 
   .contact {
     min-height: auto;
@@ -948,4 +954,5 @@ color: var(--light-blue);
       100% {
         width: 0;
       }
+
     }
