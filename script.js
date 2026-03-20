@@ -46,7 +46,3 @@ submitButton.addEventListener('click', () => {
   window.location.href = mailtoLink;
 });
 
-}
-
-// Every 3 seconds
-setInterval(createShootingStar, 3000);
