@@ -9,6 +9,17 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+  <!-- 🌌 Background Video -->
+  <video autoplay loop muted playsinline class="bg-video">
+    <source src="videos/space.mp4" type="video/mp4">
+  </video>
+  <button id="music-toggle" class="music-btn">🔊</button>
+
+  <audio id="bg-music" loop>
+    <source src="audio/space-piano.mp3" type="audio/mpeg">
+  </audio>
+  <!-- Dark Overlay -->
+  <div class="video-overlay"></div>
   <header class="header">
     <a href="#" class="logo">Kanishk.<span class="animate" style="--i:1;"></span></a>
     <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:2;"></span></div>
@@ -25,36 +36,39 @@
   </header>
   <section class="home show-animate" id="home">
     <div class="home-content">
-        <h1>Hi, I'm Kanishk</h1>
-        <h3>Software Engineer</h3>
+        <h1>Hi, I'm Kanishk <span class="dynamic-text"></span>
+        </h1>
         <p>"I am deeply curious and eager to solve new problems<br>
             while continuously learning and embracing new concepts.<br>
             I approach challenges with an open mind and a willingness<br>
             to learn, regardless of their difficulty." </p>
             <div class="btn-box">
                 <a href="hireme.html" target="_blank">My Projects</a>
-                <a href="letstalk.html" target="_blank">Let's Talk</a>
+                <a href="kanishk_resume.pdf" target="_blank">My Resume</a>
               </div>
 
             </div>
     </div> 
-
+     
+    <img src="kanishk.png" class="home-img">
     <div class="home-sci">
       <a href="https://github.com/Whitedevilo1" target="_blank"><i class='bx bxl-github'></i></a>
       <a href="https://www.instagram.com/lucifer15_14?igsh=MTRmeDFtMG1oY3duaQ==" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
-      <a href="https://www.linkedin.com/in/kanishk-jakhmola?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class='bx bxl-linkedin'></i></a>
-
-      </div>
+      <a href="https://www.linkedin.com/in/kanishk-it/" target="_blank"><i class='bx bxl-linkedin'></i></a>
     </div>
 
-    <span class="home-imgHover"></span>
+    
 </section>
 <section class="about" id="about">
   <h2 class="heading">About  <span>Me</span></h2>
 
   <div class="about-img">
-    <img src="./om.jpg" alt="">
+    
+      <img src="./om.png" alt="">
+    
+
     <span class="circle-spin"></span>
+    <span class="circle-spin2"></span>
   </div>
 
   <div class="about-content">
@@ -66,8 +80,20 @@
    which I find both relaxing and intellectually stimulating.
    I am committed to consistent growth and strive to excel in every endeavor"</p>
 
+    <!-- 🔽 Hidden content -->
+  <div class="more-text" id="moreText">
+    <p>
+      I see challenges as an essential part of growth. When something doesn’t work, 
+      I take time to debug thoroughly, understand the root cause, and learn from the process rather 
+      than just fixing the issue. This approach has helped me become more patient and detail-oriented over time.<br><br>
+      Apart from building projects, I spend time exploring new technologies and improving my problem-solving skills. 
+      I’m particularly interested in understanding how systems work behind the scenes rather than just using them at a surface level.<br><br>
+      Outside of coding, I enjoy playing chess, solving puzzles, and sketching.These interests help me stay creative, improve my analytical thinking, and maintain a balanced perspective.
+    </p>
+  </div>
+
    <div class="btn-box btns">
-    <a href="#" class="btn">Read More</a>
+    <a href="#" id="readMoreBtn" class="btn">Read More</a>
    </div>
   </div>
 </section>
@@ -143,94 +169,131 @@
 <section class="skills" id="skills">
   <h2 class="heading">My <span>Skills</span></h2>
 
-  <div class="skills-row">
-    <div class="skills-column">
-      <h3 class="title">Coding Skills</h3>
-      <div class="skills-box">
-        <div class="skills-content">
-          <div class="progress">
-            <h3>HTML <span>75%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
-          <div class="progress">
-            <h3>CSS <span>75%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
-          <div class="progress">
-            <h3>Java-Script <span>50%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
-          <div class="progress">
-            <h3>C <span>85%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
-          <div class="progress">
-            <h3>Database Management : My SQL <span>70%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
+  <div class="skills-grid">
 
-        </div>
+    <div class="skill-card">
+      <h3>Programming Languages</h3>
+      <div class="tags">
+        <span>C</span>
+        <span>Java</span>
+        <span>Python</span>
       </div>
     </div>
 
-    <div class="skills-column">
-      <h3 class="title">Professional Skills</h3>
-      <div class="skills-box">
-        <div class="skills-content">
-          <div class="progress">
-            <h3>Web Design <span>75%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
+    <div class="skill-card">
+      <h3>Web Development</h3>
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Node.js</span>
+        <span>Express.js</span>
+      </div>
+    </div>
 
-          <div class="progress">
-            <h3>Web Development <span>80%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
+    <div class="skill-card">
+      <h3>Databases</h3>
+      <div class="tags">
+        <span>MySQL</span>
+        <span>PostgreSQL</span>
+        <span>MongoDB</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Data Analytics</h3>
+      <div class="tags">
+        <span>Pandas</span>
+        <span>NumPy</span>
+        <span>Matplotlib</span>
+        <span>Power BI</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Tools & Platforms</h3>
+      <div class="tags">
+        <span>Git</span>
+        <span>GitHub</span>
+        <span>Bash</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>IDEs</h3>
+      <div class="tags">
+        <span>VS Code</span>
+        <span>Postman</span>
+        <span>Jupyter</span>
+      </div>
+    </div>
+
   </div>
-       <div class="progress">
-            <h3>Machine Learning & Model Development <span>65%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
-          <div class="progress">
-            <h3>Data Analytics & Insights <span>75%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
- </div>
 </section>
 <section class="contact" id="contact">
-  <h2 class="heading">Contact <span>Me!</span></h2>
+  <h2 class="heading">Contact <span>Me</span></h2>
 
-  <form action="javascript:;" method="POST" enctype="text/plain">
-    <div class="input-box">
-      <div class="input-field">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <span class="focus"></span>
+  <div class="contact-container">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-info">
+      <h3>Let's Connect</h3>
+      <p>
+        “Turning caffeine into efficient code, one problem at a time. 
+        I’m open to internships, collaborations, and opportunities where I can learn, 
+        contribute, and grow—let’s connect.”
+      </p>
+
+      <div class="info-item">
+        <i class='bx bx-envelope'></i>
+        <span>kanishkjakhmola@gmail.com</span>
       </div>
-      <div class="input-field">
-        <input type="email" name="email" placeholder="Email Address" required>
-        <span class="focus"></span>
+
+      <div class="info-item">
+        <i class='bx bx-phone'></i>
+        <span>+91 9045769185</span>
       </div>
-      <div class="input-field">
-        <input type="tel" name="phone" placeholder="Mobile Number" required>
-        <span class="focus"></span>
-      </div>
-      <div class="input-field">
-        <input type="text" name="subject" placeholder="Email Subject" required>
-        <span class="focus"></span>
+
+      <div class="info-item">
+        <i class='bx bx-map'></i>
+        <span>Bhubaneswar, Odisha, India</span>
       </div>
     </div>
 
-    <div class="textarea-field">
-      <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
-      <span class="focus"></span>
+    <!-- RIGHT SIDE -->
+    <div class="contact-form">
+      <!-- 🔥 CHANGE 1: added id -->
+      <form id="contact-form" action="https://formspree.io/f/xnjgrdeg" method="POST">
+
+        <!-- 🔥 CHANGE 2: hidden subject -->
+        <input type="hidden" name="_subject" value="New message from portfolio">
+
+        <div class="input-box">
+          <input type="text" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="input-box">
+          <input type="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-box">
+          <input type="text" name="subject" placeholder="Subject of your message" required>
+        </div>
+
+        <div class="input-box">
+          <textarea name="message" rows="6" placeholder="Type your message here..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+
+        <!-- 🔥 NEW: success message -->
+        <p id="form-status" style="margin-top:10px; font-size:14px;"></p>
+
+      </form>
     </div>
 
-    <div class="btn-box btns">
-      <button type="submit" class="btn">Submit</button>
-    </div>
-  </form>
+  </div>
 </section>
-
 <footer class="footer">
   <div class="footer-text">
     <p>Copyright &copy; 2025 by Kanishk | All Rights Reserved</p>
